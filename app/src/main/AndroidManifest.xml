@@ -1,16 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.sharkBytesLab.nocomusic">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+
     <application
+        android:name="com.sharkBytesLab.nocomusic.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.NOCOMusic">
+        android:theme="@style/Theme.RewardApp"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
         <activity
-            android:name=".MainActivity"
+            android:name="com.sharkBytesLab.nocomusic.Screens.OffersScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.sharkBytesLab.nocomusic.Screens.HistoryScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.sharkBytesLab.nocomusic.Screens.newlayout"
+            android:exported="false" />
+        <activity
+            android:name="com.sharkBytesLab.nocomusic.Screens.DonationScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.sharkBytesLab.nocomusic.Screens.SetWallpaperScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.sharkBytesLab.nocomusic.Screens.WallpaperScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.sharkBytesLab.nocomusic.Screens.MusicPlayerScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.sharkBytesLab.nocomusic.Screens.PlayMusicOnDeviceScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.sharkBytesLab.nocomusic.Screens.WeeklyRewardScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.sharkBytesLab.nocomusic.SpinGift.SpinActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.sharkBytesLab.nocomusic.Screens.AppStatsScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.sharkBytesLab.nocomusic.Screens.PolicyScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.sharkBytesLab.nocomusic.Screens.TermsScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.sharkBytesLab.nocomusic.Screens.RegisterPrivacyPolicyScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.sharkBytesLab.nocomusic.Screens.PromotionFormScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.sharkBytesLab.nocomusic.Screens.DownloadSongScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.sharkBytesLab.nocomusic.Screens.OtpVerifyScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.sharkBytesLab.nocomusic.Screens.RegisterScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.sharkBytesLab.nocomusic.Screens.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,6 +84,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.sharkBytesLab.nocomusic.MainActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="applovin.sdk.key"
+            android:value="doNokpQpB4U8uCdC0RFRN7O2VWKagVVGIFFffq_NSgiVQ4_TOoqDFOmBgdKpxUgGSRpRiC39b85dC8_TkifX2y" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5127713321341585~9396518456"/>
     </application>
 
 </manifest>
