@@ -8,16 +8,16 @@
     android:background="#DAD5D5"
     tools:context=".MainActivity">
 
-    <com.applovin.mediation.ads.MaxAdView
-        android:id="@+id/applovinMainAd"
-        xmlns:maxads="http://schemas.applovin.com/android/1.0"
-        maxads:adUnitId="9f43d87dade10af3"
-        android:layout_width="match_parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
-        android:layout_height="50dp">
-    </com.applovin.mediation.ads.MaxAdView>
+<!--    <com.applovin.mediation.ads.MaxAdView-->
+<!--        android:id="@+id/applovinMainAd"-->
+<!--        xmlns:maxads="http://schemas.applovin.com/android/1.0"-->
+<!--        maxads:adUnitId="9f43d87dade10af3"-->
+<!--        android:layout_width="match_parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"-->
+<!--        android:layout_height="50dp">-->
+<!--    </com.applovin.mediation.ads.MaxAdView>-->
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
@@ -94,7 +94,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintBottom_toTopOf="@+id/applovinMainAd"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
         />
 
 

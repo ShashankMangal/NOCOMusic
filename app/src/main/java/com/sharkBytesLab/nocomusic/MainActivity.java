@@ -29,8 +29,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.applovin.sdk.AppLovinSdk;
-import com.applovin.sdk.AppLovinSdkConfiguration;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -137,16 +135,16 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-            AppLovinSdk.getInstance( this ).setMediationProvider( "max" );
-            AppLovinSdk.initializeSdk( this, new AppLovinSdk.SdkInitializationListener() {
-                @Override
-                public void onSdkInitialized(final AppLovinSdkConfiguration configuration)
-                {
-
-                }
-            } );
-
-            binding.applovinMainAd.loadAd();
+//            AppLovinSdk.getInstance( this ).setMediationProvider( "max" );
+//            AppLovinSdk.initializeSdk( this, new AppLovinSdk.SdkInitializationListener() {
+//                @Override
+//                public void onSdkInitialized(final AppLovinSdkConfiguration configuration)
+//                {
+//
+//                }
+//            } );
+//
+//            binding.applovinMainAd.loadAd();
 
 
 

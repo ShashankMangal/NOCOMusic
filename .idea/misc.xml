@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Apps By ShaShank/APPS FOR INTERN/NOCOMusic/app/src/main/res/layout/activity_app_stats_screen.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Apps By ShaShank/APPS FOR INTERN/NOCOMusic/app/src/main/res/layout/activity_download_song_screen.xml" value="0.27291666666666664" />
         <entry key="..\:/Android Apps By ShaShank/APPS FOR INTERN/NOCOMusic/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
         <entry key="..\:/Android Apps By ShaShank/APPS FOR INTERN/NOCOMusic/app/src/main/res/layout/activity_splash_screen.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Apps By ShaShank/APPS FOR INTERN/NOCOMusic/app/src/main/res/layout/fragment_profile.xml" value="0.27291666666666664" />
       </map>
     </option>
   </component>
