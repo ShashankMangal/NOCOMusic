@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_promotion_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_list"
+    android:gravity="center"
+    tools:context=".Fragment.PromotionFragment">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/uniqueId"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Your promoId :  ****************************"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@color/shadow"
+        android:padding="8dp"
+        android:drawableTint="@color/white"
+        android:drawablePadding="5dp"
+        android:drawableEnd="@drawable/ic_baseline_content_copy_24"
+        android:textSize="16sp"
+        android:fontFamily="@font/airbnb_cereal_medium"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/promotionByTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/promotionCardView"
+        android:text="Promotion raised by : NCS Hindi"
+        android:gravity="center"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="@color/textGreen"
+        android:background="@color/shadow"
+        android:padding="5dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/airbnb_cereal_medium"
+
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:elevation="4dp"
+        android:layout_margin="5dp"
+
+        android:id="@+id/promotionCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uniqueId"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/hhh"
+            >
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Promotion Section"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/airbnb_cereal_medium"
+                />
+
+            <ImageView
+                android:id="@+id/youtube_logo"
+                android:layout_gravity="center"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/youtube"
+
+                />
+            <TextView
+                android:id="@+id/channelNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Channel Name"
+                android:gravity="center"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/aclonica"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:singleLine="true"
+                android:scrollHorizontally="true"
+                />
+
+            <Button
+                android:id="@+id/subscribeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUBSCRIBE"
+                android:drawableTint="@color/white"
+                android:textSize="17sp"
+                android:backgroundTint="@color/textRed"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/promotion_duration"
+                android:layout_marginTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="XX-XX-XXXX to YY-YY-YYYY"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/airbnb_cereal_light"
+                />
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/promotionRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        tools:listitem="@layout/promotion_item"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/promotionByTv"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/home_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="26dp"
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_cell_tower_24"
+        app:backgroundTint="@color/shadow"
+        app:elevation="10dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="36dp"
+        app:tint="@color/themeGreen"
+        tools:ignore="SpeakableTextPresentCheck"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

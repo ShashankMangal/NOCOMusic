@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ncshindinewcolor"
+        tools:context=".Screens.WeeklyRewardScreen">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarWeeklyRewardScreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/themeGreen"
+            android:elevation="10dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/backWeeklyReward"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="9dp"
+                android:backgroundTint="@color/ncshindinewcolor"
+                android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+                app:tint="@color/ncshindinewcolor" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <TextView
+            android:id="@+id/payoutsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/airbnb_cereal_black"
+            android:gravity="center"
+            android:text="Win weekly paytm reward upto"
+            android:textAllCaps="true"
+            android:textColor="@color/themeGreen"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarWeeklyRewardScreen" />
+
+        <LinearLayout
+            android:id="@+id/paymentLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/payoutsText"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/airbnb_cereal_black"
+                android:gravity="center"
+                android:text="₹"
+                android:textAllCaps="true"
+                android:textColor="@color/themeGreen"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/totalPaymentDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:fontFamily="@font/airbnb_cereal_black"
+                android:gravity="center"
+                android:text="2000"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/freeCoins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/communityitemtextview"
+            android:fontFamily="@font/airbnb_cereal_medium"
+            android:padding="8dp"
+            android:text="Earn Free Coin"
+            android:textColor="@color/ncshindinewcolor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/redeemHistory"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/paymentLl" />
+
+        <TextView
+            android:id="@+id/redeemHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/communityitemtextview"
+            android:fontFamily="@font/airbnb_cereal_medium"
+            android:padding="8dp"
+            android:text="Reward History"
+            android:textColor="@color/ncshindinewcolor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/freeCoins"
+            app:layout_constraintTop_toBottomOf="@+id/paymentLl" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/freeCoins">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+
+                    >
+
+
+                    <RelativeLayout
+                        android:id="@+id/giftCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/round_bk5"
+                        android:backgroundTint="#2568CD">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/baloo"
+                            android:padding="25dp"
+                            android:text="Gift Card"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="26sp"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/baloo"
+                            android:text="Unlocks at 1000 coins"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/weeklyCardClaim"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:background="#00000000"
+                            android:fontFamily="@font/airbnb_cereal_medium"
+                            android:padding="20dp"
+                            android:text="Claim"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="180dp"
+                        android:layout_height="220dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="-10dp"
+                        android:layout_marginBottom="50dp"
+                        app:lottie_autoPlay="true"
+                        app:lottie_fileName="weeklygift.json"
+                        app:lottie_loop="true" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/goldGiftCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/round_bk5"
+                        android:backgroundTint="#FFC107">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/baloo"
+                            android:padding="25dp"
+                            android:text="Gold Gift Card"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="26sp"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/baloo"
+                            android:text="Unlocks at 5000 coins"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/goldCardClaim"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="8dp"
+                            android:background="#00000000"
+                            android:fontFamily="@font/airbnb_cereal_medium"
+                            android:padding="20dp"
+                            android:text="Claim"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="-10dp"
+                        app:lottie_autoPlay="true"
+                        app:lottie_fileName="gift.json"
+                        app:lottie_loop="true" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/luckyGiftCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/round_bk5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/baloo"
+                            android:padding="25dp"
+                            android:text="Lucky Gift Card"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="26sp"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/baloo"
+                            android:text="Unlocks at 15000 coins"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/luckyCardClaim"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="8dp"
+                            android:background="#00000000"
+                            android:fontFamily="@font/airbnb_cereal_medium"
+                            android:padding="20dp"
+                            android:text="Claim"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="-10dp"
+                        app:lottie_autoPlay="true"
+                        app:lottie_fileName="gift.json"
+                        app:lottie_loop="true" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/sheetViewLayoutLucky"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.LuckyRewardSheet">
+
+    <View
+        android:id="@+id/viewTopLucky"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/sheet_bg"
+        android:backgroundTint="#e61b25"
+        />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/rewardmedal"
+        app:layout_constraintEnd_toEndOf="@id/viewTopLucky"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toTopOf="@id/viewTopLucky"
+        app:layout_constraintBottom_toBottomOf="@id/viewTopLucky"
+        android:scaleType="centerCrop"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lucky\nGift Card"
+        android:textSize="40sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/airbnb_cereal_bold"
+        app:layout_constraintStart_toStartOf="@id/viewTopLucky"
+        app:layout_constraintTop_toTopOf="@id/viewTopLucky"
+        app:layout_constraintBottom_toBottomOf="@id/viewTopLucky"
+        android:layout_margin="30dp"
+
+        />
+
+    <View
+        android:id="@+id/ncsColorViewLucky"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewTopLucky"
+        >
+    </View>
+
+    <TextView
+        android:id="@+id/note7"
+        android:layout_width="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content"
+        android:text="* Lucky Gift Card requires 15000\n  coins to unlock"
+        android:textColor="@color/ncshindinewcolor"
+        android:fontFamily="@font/airbnb_cereal_medium"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/ncsColorViewLucky"
+        app:layout_constraintEnd_toEndOf="@id/ncsColorViewLucky"
+        app:layout_constraintTop_toTopOf="@id/ncsColorViewLucky"
+        android:gravity="start"
+
+        />
+
+    <TextView
+        android:id="@+id/note8"
+        android:layout_width="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content"
+        android:text="* Payment processing may take 3-5 \n  working days."
+        android:textColor="@color/ncshindinewcolor"
+        android:fontFamily="@font/airbnb_cereal_medium"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/ncsColorViewLucky"
+        app:layout_constraintEnd_toEndOf="@id/ncsColorViewLucky"
+        app:layout_constraintTop_toBottomOf="@+id/note7"
+        android:gravity="start"
+
+        />
+
+    <TextView
+        android:id="@+id/note9"
+        android:layout_width="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content"
+        android:text="* Redeem this card to win upto ₹20\n   PayTm *"
+        android:textColor="@color/ncshindinewcolor"
+        android:fontFamily="@font/airbnb_cereal_medium"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/ncsColorViewLucky"
+        app:layout_constraintEnd_toEndOf="@id/ncsColorViewLucky"
+        app:layout_constraintTop_toBottomOf="@+id/note8"
+        android:gravity="start"
+
+        />
+
+    <Button
+        android:id="@+id/claimLuckyReward"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Claim Reward"
+        app:layout_constraintStart_toStartOf="@id/paytmLucky"
+        app:layout_constraintEnd_toEndOf="@id/paytmLucky"
+        app:layout_constraintTop_toBottomOf="@id/paytmLucky"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="7dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:backgroundTint="#e61b25"
+        android:textColor="@color/white"
+
+        />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/paytmLucky"
+        app:layout_constraintTop_toBottomOf="@+id/note9"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/note9"
+        app:layout_constraintEnd_toEndOf="@id/note9"
+        android:ems="10"
+        android:maxLength="10"
+        android:background="@drawable/payment_input_lucky"
+        android:textSize="18sp"
+        android:paddingStart="10dp"
+        android:drawableTint="#e61b25"
+        android:paddingEnd="10dp"
+        android:inputType="phone"
+        android:hint="9999xxxxxx (PayTm)"
+        android:drawableStart="@drawable/ic_baseline_payment_24"
+        android:drawablePadding="10dp"
+
+        />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintEnd_toEndOf="@id/viewTopLucky"
+        app:layout_constraintTop_toTopOf="@id/viewTopLucky"
+        android:layout_margin="10dp"
+        android:id="@+id/closeLuckySheet"
+        app:tint="@color/white" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/promotion_screen_constraint"
+    android:background="@drawable/gradient_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Screens.PromotionFormScreen">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_promotion"
+        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/themeGreen"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="9dp"
+            android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+            android:id="@+id/promotion_arrow_back"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_promotion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="5dp"
+        android:fillViewport="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fill Promotion Form"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:textColor="@color/shadow"
+            android:fontFamily="@font/airbnb_cereal_book"
+            android:layout_marginTop="5dp"
+
+            />
+
+            <TextView
+                android:id="@+id/dateCurrent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Current Date "
+                android:gravity="center"
+                android:textSize="22sp"
+                android:textColor="@color/shadow"
+                android:fontFamily="@font/airbnb_cereal_medium"
+                android:layout_marginTop="5dp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/white"
+                android:hint="Your Full Name"
+                android:textColorHint="@color/shadow"
+                app:startIconDrawable="@drawable/ic_baseline_account_circle_24"
+                app:startIconTint="@color/shadow">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/userNameText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:textColor="@color/themeBlue"
+                    android:textSize="20sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/channelName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/white"
+                android:hint="Enter Channel Name"
+                android:textColorHint="@color/shadow"
+                app:startIconDrawable="@drawable/ic_baseline_video_library_24"
+                app:startIconTint="@color/shadow">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/channelNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:inputType="text"
+                android:maxLength="70"
+                android:textColor="@color/themeBlue"
+                android:textSize="20sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/channelUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/white"
+                android:hint="Channel URL"
+                android:textColorHint="@color/shadow"
+                app:startIconDrawable="@drawable/ic_baseline_link_24"
+                app:startIconTint="@color/shadow">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/channelUrlText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:inputType="text"
+                android:maxLength="70"
+                android:textColor="@color/themeBlue"
+                android:textSize="20sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Coins deducted from account : 100"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:textColor="@color/shadow"
+                android:fontFamily="@font/airbnb_cereal_medium"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="32dp"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Period of Promotion : 3 Days"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:textColor="@color/shadow"
+                android:fontFamily="@font/airbnb_cereal_medium"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp"
+
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/addPromotionButton"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp"
+                android:text="PROMOTE"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="( Your previous promotion is In Queue, you can add new promotion when it ends.)"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:textColor="@color/darkRed"
+                android:fontFamily="@font/airbnb_cereal_black"
+                android:id="@+id/promo_warning"
+                android:visibility="gone"
+                />
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/enquiryButton"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp"
+                android:text="ENQUIRY"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Note : \n (1.) -> If your channel URL is wrong the promotion will not get live on app.
+                               \n\n(2.) -> You can only promote your channel once a week.
+                                \n\n(3.) -> Your promotion will not get live instantly on app, It will be added in promotion queue. You can check the promotion list under promotion area.
+                                \n\n(4.) -> If you have any query or issue you can do enquiry with our team.
+                                \n\n(5.) -> Contact on instagram (only_ncshindi) for promotion on youtube community post.
+                                \n"
+                android:gravity="start"
+                android:textSize="16sp"
+                android:textColor="@color/shadow"
+                android:fontFamily="@font/airbnb_cereal_medium"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp"
+
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

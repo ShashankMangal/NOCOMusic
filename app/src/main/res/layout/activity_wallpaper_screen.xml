@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Screens.WallpaperScreen">
+
+    <Toolbar
+        android:id="@+id/toolbarWallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/themeGreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="9dp"
+            android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+            android:id="@+id/wallpaper_back_arrow"
+            app:tint="@color/ncshindinewcolor"
+
+            />
+
+    </Toolbar>
+
+    <LinearLayout
+        android:id="@+id/searchLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarWallpaper"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:textSize="17sp"
+            android:id="@+id/searchWallpaperEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/ncshindinewcolor"
+            android:textColorHint="@color/fadeBlack"
+            android:background="@drawable/edittextbg"
+            android:layout_margin="8dp"
+            android:hint="Search Image"
+            android:textAlignment="center"
+            android:fontFamily="@font/airbnb_cereal_medium"
+            />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_search_24"
+            android:id="@+id/search"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="-55dp"
+            app:tint="@color/ncshindinewcolor">
+
+        </ImageButton>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cardViewLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchLinearLayout"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:id="@+id/musicCard"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="10dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="MUSIC"
+                android:paddingRight="30dp"
+                android:paddingTop="15dp"
+                android:textColor="@color/ncshindinewcolor"
+                android:background="@drawable/musicbg"
+                android:gravity="end"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                >
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/musictunepng"
+                app:tint="@color/ncshindinewcolor"
+                android:scaleType="centerCrop"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:id="@+id/trendingCard"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="10dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="TRENDING"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp"
+                android:textColor="@color/ncshindinewcolor"
+                android:background="@drawable/musicbg"
+                android:gravity="end"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                >
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_baseline_local_fire_department_24"
+                app:tint="@color/ncshindinewcolor"
+                android:scaleType="centerCrop"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/wallpaperRecyclerView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewLinearLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

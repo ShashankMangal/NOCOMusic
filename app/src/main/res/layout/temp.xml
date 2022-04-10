@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_community_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_list"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/telegramChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="#26b0e5"
+        android:text="Telegram"
+        app:layout_constraintEnd_toStartOf="@+id/subscribe_yt"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/subscribe_yt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/textRed"
+        android:text="Subscribe "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/telegramChat"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.smarteist.autoimageslider.SliderView
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:id="@+id/sliderViewSponsor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subscribe_yt"
+        android:layout_marginBottom="5dp"
+        app:sliderAnimationDuration="800"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderAutoCycleEnabled="true"
+        app:sliderIndicatorAnimationDuration="800"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorRadius="2dp"
+        app:sliderIndicatorSelectedColor="#AEAAAA"
+        app:sliderScrollTimeInSec="3"
+        app:sliderStartAutoCycle="true"
+        app:sliderIndicatorUnselectedColor="#FFF"
+        />
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/coinsReward"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/coin"
+        android:layout_marginTop="5dp"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="5dp"
+        app:civ_circle_background_color="@color/themeGreen"
+        app:layout_constraintStart_toEndOf="@id/appStats"
+        app:layout_constraintEnd_toStartOf="@id/wallpaperSet"
+        app:layout_constraintTop_toBottomOf="@id/appStats" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/sponsorBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sponsor"
+        android:layout_marginTop="5dp"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="5dp"
+        app:civ_circle_background_color="@color/themeGreen"
+        app:layout_constraintStart_toEndOf="@id/wallpaperSet"
+        app:layout_constraintEnd_toStartOf="@id/downloadPlaySongs"
+        app:layout_constraintTop_toBottomOf="@id/appStats" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/appStats"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/piechart"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="5dp"
+        app:civ_circle_background_color="@color/themeGreen"
+        app:layout_constraintEnd_toStartOf="@+id/wallpaperSet"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sliderViewSponsor" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/wallpaperSet"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wallpapericon"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="5dp"
+        app:civ_circle_background_color="@color/themeGreen"
+        app:layout_constraintEnd_toStartOf="@+id/downloadPlaySongs"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/appStats"
+        app:layout_constraintTop_toBottomOf="@id/sliderViewSponsor" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/downloadPlaySongs"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/musicicon"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="5dp"
+        app:civ_circle_background_color="@color/themeGreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/wallpaperSet"
+        app:layout_constraintTop_toBottomOf="@id/sliderViewSponsor" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/communityRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/coinsReward"
+        tools:listitem="@layout/community_msg"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

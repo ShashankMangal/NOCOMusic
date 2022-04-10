@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:id="@+id/download_song_screen_animation"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient_list"
+    android:layout_height="match_parent"
+    tools:context=".Screens.DownloadSongScreen"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    >
+
+    <com.smarteist.autoimageslider.SliderView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:id="@+id/sliderView"
+        android:layout_marginBottom="5dp"
+        app:sliderAnimationDuration="600"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderAutoCycleEnabled="true"
+        app:sliderIndicatorAnimationDuration="600"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorRadius="2dp"
+        app:sliderIndicatorSelectedColor="@color/shadow"
+        app:sliderScrollTimeInSec="2"
+        app:sliderStartAutoCycle="true"
+        app:sliderIndicatorUnselectedColor="#FFF"
+        />
+
+<!--    <com.applovin.mediation.ads.MaxAdView-->
+<!--        android:id="@+id/applovinAd"-->
+<!--        xmlns:maxads="http://schemas.applovin.com/android/1.0"-->
+<!--        maxads:adUnitId="02cf057d7641fdd0"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp">-->
+<!--    </com.applovin.mediation.ads.MaxAdView>-->
+
+
+    <ScrollView
+        android:id="@+id/downloadScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/downloadCardSong"
+        app:cardBackgroundColor="@color/shadow"
+        android:padding="10dp"
+        app:cardElevation="4dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_marginTop="13dp"
+                android:id="@+id/songNameFlowingText"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Song Name... ffuieuuifiufuihfhfhfhfhfhfhfhfhfhfhfhfhfhfhffffffffffffff"
+                android:textColor="@color/themeGreen"
+                android:textSize="22sp"
+                android:fontFamily="@font/airbnb_cereal_medium"
+                android:singleLine="true"
+                android:scrollHorizontally="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preparing File : 00:00"
+                android:textColor="@color/white"
+                android:id="@+id/timer_downloadSong"
+                android:fontFamily="@font/airbnb_cereal_medium"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:textSize="20sp"
+                android:drawableEnd="@drawable/ic_baseline_access_time_24"
+                android:drawableTint="@color/white"
+                android:drawablePadding="5dp"
+                />
+
+            <TextView
+                android:id="@+id/skipTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skip Timer"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:background="@drawable/round_back_rateus"
+                android:padding="10dp"
+                />
+
+        <ImageView
+            android:id="@+id/downloadImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_baseline_cloud_download_24"
+            android:shadowColor="@color/shadow"
+
+            app:tint="@color/themeGreen" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Download Here"
+                android:textColor="@color/themeGreen"
+                android:textSize="18sp"
+                android:fontFamily="@font/airbnb_cereal_medium"
+                android:layout_margin="9dp"/>
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/playSongCard"
+        app:cardBackgroundColor="@color/themeYellow"
+        android:padding="10dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="20dp"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+            <TextView
+                android:id="@+id/playSong"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/refer_bg"
+                android:fontFamily="@font/airbnb_cereal_medium"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:padding="20dp"
+                android:text="Play Song"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Download and Play..."
+                android:textColor="@color/shadow"
+                android:textSize="21sp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:fontFamily="@font/airbnb_cereal_medium"
+                />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>
+</layout>

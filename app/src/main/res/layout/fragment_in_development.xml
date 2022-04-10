@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/sheetViewLayoutInDevelopment"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.InDevelopmentFragment">
+
+    <View
+        android:id="@+id/viewTopDevelop"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/sheet_bg"
+        android:backgroundTint="#e61b25"
+        />
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintEnd_toEndOf="@id/viewTopDevelop"
+        app:layout_constraintTop_toTopOf="@id/viewTopDevelop"
+        android:layout_margin="6dp"
+        android:id="@+id/closeInDevelopmentSheet"
+        app:tint="@color/white" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="This Feature is under Maintenance. You will get notification when it is live."
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/airbnb_cereal_bold"
+        app:layout_constraintStart_toStartOf="@id/viewTopDevelop"
+        app:layout_constraintTop_toTopOf="@id/viewTopDevelop"
+        app:layout_constraintBottom_toBottomOf="@id/viewTopDevelop"
+        app:layout_constraintEnd_toStartOf="@id/closeInDevelopmentSheet"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
